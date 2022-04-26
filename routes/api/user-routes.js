@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const req = require('express/lib/request');
 const res = require('express/lib/response');
-const {User } = require('../../models');
+const {User} = require('../../models');
 const { restore } = require('../../models/User');
 
 // GET > API/USERS
@@ -36,7 +36,7 @@ router.get('/:id', (req,res) => {
 });
 
 // POST > /API/USERS
-router.post('/'. (req,res) => {
+router.post('/', (req,res) => {
     // NOTE > EXPECTS {username: 'Lernantino', email: 'lernantino@gmail.com', password:'password1234'}
     User.create({
         username: req.body.username,
