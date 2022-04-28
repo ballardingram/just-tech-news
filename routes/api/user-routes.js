@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const res = require('express/lib/response');
 const {User} = require('../../models');
 
 // GET > ALL API/USERS
@@ -52,7 +51,7 @@ router.post('/', (req,res) => {
 });
 
 // PROCESS > LOGIN AND PASSWORD VALIDATION
-router.post('login', (req,res) => {
+router.post('/login', (req,res) => {
     // NOTE > EXPECTS {email: 'lernantino@gmail.com', password: 'password1234'}
     User.findOne({
         where: {
